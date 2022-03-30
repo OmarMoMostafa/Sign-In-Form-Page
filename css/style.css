@@ -138,6 +138,12 @@ form i {
     border-radius: 20px;
 }
 
+.input-field:focus {
+    outline: 2px solid var(--secondry-dark);
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
 .strength-container {
     display: flex;
 }
@@ -166,7 +172,8 @@ form i {
     display: flex;
 }
 
-.btns button {
+.btns button,
+.btns a {
     width: 50%;
     height: 40px;
     border-radius: 20px;
@@ -185,6 +192,9 @@ form i {
 }
 
 .btns .sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     color: var(--white);
     border: 2px solid var(--white);
@@ -282,7 +292,8 @@ form i {
         align-items: center;
     }
 
-    .btns button {
+    .btns button,
+    .btns a {
         margin-bottom: 20px;
         width: 100%;
     }
@@ -295,7 +306,8 @@ form i {
         align-items: center;
     }
 
-    .btns button {
+    .btns button,
+    .btns a  {
         margin-bottom: 20px;
         width: 100%;
     }
