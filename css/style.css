@@ -24,6 +24,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-color: var(--primary);
 }
 
 /* showcase styles */
@@ -32,11 +33,14 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0 30px;
+    background-color: var(--white);
+    border-radius: 0 37px 37px 0;
 
     /* animation related */
     transform: translatex(-100%);
     animation-name: enter-right;
     animation-duration: 1s;
+    animation-delay: 1.5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -59,23 +63,26 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+.form.animate {
     /* animation related */
     transform: translateY(-100%);
     animation-name: enter-down;
+    animation-delay: 1.5s;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
 
-.form > h1,
-.form .btns,
-.form .strength-container {
+.form.animate > h1,
+.form.animate .btns,
+.form.animate .strength-container {
     /* animation related */
     opacity: 0;    
     animation-name: fade-in;
     animation-duration: 1s;
-    animation-delay: 1s;
+    animation-delay: 2.5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -166,10 +173,15 @@ form i {
     margin: 0 10px;
     border: 0;
     cursor: pointer;
+    transition: all .25s ease-in-out;
 }
 
 .btns .create-account {
     background-image: linear-gradient(to right, var(--secondry) , var(--secondry-dark));
+}
+
+.btns button:hover {
+    transform: scale(1.1);
 }
 
 .btns .sign-in {
@@ -187,6 +199,21 @@ form i {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.loader.hide {
+    animation: fade-out 0.5s linear 1s forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 }
 
 .loader .cover {
