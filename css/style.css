@@ -200,6 +200,12 @@ form i {
     border: 2px solid var(--white);
 }
 
+.btns .sign-in:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+
+}
+
 /* loader styles */
 .loader {
     position: absolute;
